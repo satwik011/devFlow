@@ -8,7 +8,7 @@ const Home = async () => {
   return (
     <div className="font-inter">
       <h1>Welcome to Next.js !</h1>
-      <form
+      {/* <form
         className="px-10 pt-[100px]"
         action={async () => {
           "use server";
@@ -18,7 +18,7 @@ const Home = async () => {
         }}
       >
         <Button type="submit">Log out</Button>
-      </form>
+      </form> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Iuser } from "@/database/user.model";
+import { IUser } from "@/database/user.model";
 import { fetchHandler } from "./handlers/fetch";
 import { id } from "zod/v4/locales";
 import { IAccount } from "@/database/account.model";
@@ -22,12 +22,12 @@ export const api = {
         method: "POST",
         body: JSON.stringify({ email }),
       }),
-    create: (userData: Partial<Iuser>) =>
+    create: (userData: Partial<IUser>) =>
       fetchHandler(`${API_BASE_URL}/users`, {
         method: "POST",
         body: JSON.stringify(userData),
       }),
-    update: (id: string, userData: Partial<Iuser>) =>
+    update: (id: string, userData: Partial<IUser>) =>
       fetchHandler(`${API_BASE_URL}/users/${id}`, {
         method: "PUT",
         body: JSON.stringify(userData),

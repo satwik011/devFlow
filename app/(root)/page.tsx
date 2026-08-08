@@ -60,7 +60,6 @@ interface SearchParams {
 }
 const Home = async ({ searchParams }: SearchParams) => {
   const session = await auth();
-  console.log(session);
   const { query = "", filter = "" } = await searchParams;
   const filteredQuestions = questions.filter((question) => {
     const matchesQuery = question.title.toLowerCase().includes(query.toLowerCase());

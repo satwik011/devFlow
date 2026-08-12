@@ -21,7 +21,7 @@ const Navbar = async () => {
       <p>Global Search</p>
       <div className="flex-between gap-5">
         <Theme />
-        {userId && <UserAvatar id={userId} name={name} imageUrl={image} />}
+        {userId && <UserAvatar id={userId} name={name ?? ""} imageUrl={image ?? null} />}
         <MobileNavigation />
       </div>
     </nav>

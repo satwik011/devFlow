@@ -6,8 +6,8 @@ const ROUTES = {
   PROFILE: (id: string) => `/profile/${id}`,
   QUESTION: (id: string) => `/question/${id}`,
   SIGN_IN_WITH_OAUTH: `signin-with-oauth`,
-
   TAGS: (id: string) => `/tags/${id}`,
+  QUESTION_DETAILS: (id: string) => `/questions/${id}`,
 };
 
 export default ROUTES;

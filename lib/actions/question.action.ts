@@ -1,6 +1,5 @@
 "use server";
 import mongoose from "mongoose";
-import { ActionResponse, ErrorResponse } from "@/types/global";
 import { AskQuestionSchema, EditQuestionSchema, GetQuestionSchema } from "../validations";
 import action from "../handlers/action";
 import handleError from "../handlers/error";

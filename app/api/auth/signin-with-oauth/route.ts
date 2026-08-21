@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       if (existingUser.image !== image) updatedData.image = image;
 
       if (Object.keys(updatedData).length > 0) {
-        await User.updateOne({ _id: existingUser._id }, { $set: updatedData }).session;
+        await User.updateOne({ _id: existingUser._id }, { $set: updatedData }, { session });
       }
 
       const existingAccount = await Account.findOne({

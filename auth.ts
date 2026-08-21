@@ -10,7 +10,7 @@ import Credentials from "next-auth/providers/credentials";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
-    GitHub,
+    GitHub({ issuer: "https://github.com/login/oauth" }),
     Google,
     Credentials({
       async authorize(credentials) {
